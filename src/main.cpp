@@ -2,27 +2,40 @@
 #include <fstream>
 #include <string>
 
-void atomic_number()
+using namespace std;
+
+int find_atomic_number(string element)
 {
-	std::fstream data("src/data.txt");
+	int result{ 1 };
+	fstream data("src/data.txt");
 	if (!data.is_open())
 	{
-		std::cout << "ERROR \n";
+		cout << "ERROR \n";
 	}
 	if (data.is_open())
 	{
-		std::string x;
+		string x;
 		while (getline(data, x))
 		{
-			std::cout << x << std::endl;
+			if (x == element)
+			{
+				break;
+			}
+			result++;
 		}
 	}
 	data.close();
+	return result;
 }
 
 int main()
 {
-	std::cout << "Welcome to electronic config printer" << std::endl;
-	atomic_number();
+	int atomic_number {0};
+	string element;
+	cout << "Welcome to electronic config printer" << endl;
+	cout << "Enter a element from the modern periodic table" << endl;
+	getline(cin,element);
+	atomic_number = find_atomic_number(element);
+	cout << "Atomic number is " << atomic_number;
 	return 0;
 }
