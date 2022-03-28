@@ -23,11 +23,6 @@ int main()
 	cout << "Atomic number of " << element << " is " << atomic_number << endl;
 	vector<int> principal_quantum_number = principal_quantum_number_config(atomic_number);
 	//printing the principal quantum number
-	cout << "Principal quantam no config of " << element << " is ";
-	for (int i = 0; i < principal_quantum_number.size(); i++)
-	{
-		cout << principal_quantum_number.at(i) << " ";
-	}
-	cout << endl;
+	print_config_from_vector("principal", element, principal_quantum_number);
 	return 0;
 }

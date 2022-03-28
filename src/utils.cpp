@@ -31,3 +31,13 @@ int find_atomic_number(string element)
 	if (is_found) return result;
 	else return 0;
 }
+
+void print_config_from_vector(string name, string element, vector<int> config)
+{
+	cout << name << " quantam no config of " << element << " is ";
+	for (int i = 0; i < config.size(); i++)
+	{
+		cout << config.at(i) << " ";
+	}
+	cout << endl;
+}
