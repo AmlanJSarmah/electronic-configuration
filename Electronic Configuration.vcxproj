@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\electronic_config.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\utils.cpp" />
   </ItemGroup>
@@ -154,6 +155,7 @@
     <None Include="src\data.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Header\electronic_config.h" />
     <ClInclude Include="src\Header\utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
