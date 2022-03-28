@@ -17,7 +17,7 @@ int main()
 	atomic_number = find_atomic_number(element);
 	if (atomic_number == 0)
 	{
-		cout << "Element doesn't exist";
+		cout << "Element doesn't exist or currently unspported";
 		exit(0);
 	}
 	cout << "Atomic number of " << element << " is " << atomic_number << endl;
