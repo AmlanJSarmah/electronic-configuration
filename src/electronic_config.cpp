@@ -52,7 +52,6 @@ vector<int> second_shell_orbital_config(int no_of_electron)
 vector<int> third_shell_orbital_config(int no_of_electron,int atomic_number,bool has_fourth_shell)
 {
 	if (no_of_electron > 8 && !has_fourth_shell) no_of_electron -= 2;
-	if (atomic_number == 29) no_of_electron -= 1;
 	vector<int> config;
 	if (no_of_electron <= 2)
 	{
@@ -72,7 +71,7 @@ vector<int> third_shell_orbital_config(int no_of_electron,int atomic_number,bool
 		int no_of_orbital = 3;
 		for (int i = 0; i < no_of_orbital; i++)
 		{
-			if (atomic_number != 24 && atomic_number != 29)
+			if (atomic_number != 24)
 			{
 				if (i == 0) config.push_back(2);
 				else if (i == 1) config.push_back(6);

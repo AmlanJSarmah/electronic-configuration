@@ -40,6 +40,7 @@ vector<int> shell_to_pseudo_orbital_structure(vector<int> config,int atomic_numb
 	{
 		if (i == 2 && config.at(i)>8)
 		{
+			//the following code satisfies the Aufbau principal i.e. atomic orbitals are filled in increasing order of energy so 4s orbital gets filled before 3d and hence we arr adding the electrons to 4s.
 			if (size(config) == 3 && atomic_number != 24 && atomic_number != 19) structure.push_back(2);
 			else if (size(config) == 3 && atomic_number == 24 || atomic_number == 19) structure.push_back(1);
 		}
