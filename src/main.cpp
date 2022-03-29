@@ -22,5 +22,11 @@ int main()
 	}
 	cout << "Atomic number of " << element << " is " << atomic_number << endl;
 	vector<int> principal_quantum_number = principal_quantum_number_config(atomic_number);
+	vector<int> structure = electronic_config(atomic_number,principal_quantum_number);
+	for (int i = 0; i < size(structure); i++)
+	{
+		cout << structure.at(i) << " ";
+	}
+	cout << endl;
 	return 0;
 }

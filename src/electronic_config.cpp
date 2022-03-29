@@ -108,6 +108,6 @@ vector<int> fourth_shell_orbital_config(int no_of_electron)
 vector<int> electronic_config(int atomic_number,vector<int> principal_config) 
 {
 	vector<int> config;
-
-	return config;
+	vector<int> structure = shell_to_pseudo_orbital_structure(principal_config,atomic_number);
+	return structure;
 }

@@ -38,7 +38,7 @@ vector<int> shell_to_pseudo_orbital_structure(vector<int> config,int atomic_numb
 	vector<int> structure;
 	for (int i = 0; i < size(config); i++)
 	{
-
+		//TODO
 	}
 	return structure;
 }
