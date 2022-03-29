@@ -35,10 +35,14 @@ int find_atomic_number(string element)
 
 vector<int> shell_to_pseudo_orbital_structure(vector<int> config,int atomic_number)
 {
-	vector<int> structure;
+	vector<int> structure = config;
 	for (int i = 0; i < size(config); i++)
 	{
-		//TODO
+		if (i == 2 && config.at(i)>8)
+		{
+			if (size(config) == 3 && atomic_number != 24 && atomic_number != 19) structure.push_back(2);
+			else if (size(config) == 3 && atomic_number == 24 || atomic_number == 19) structure.push_back(1);
+		}
 	}
 	return structure;
 }

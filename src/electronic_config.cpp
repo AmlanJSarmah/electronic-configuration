@@ -28,7 +28,7 @@ vector<int> principal_quantum_number_config(int atomic_number)
 	return config;
 }
 
-vector<int> fist_shell_orbital_config(int no_of_electron)
+vector<int> first_shell_orbital_config(int no_of_electron)
 {
 	return vector<int> {no_of_electron};
 }
@@ -49,10 +49,10 @@ vector<int> second_shell_orbital_config(int no_of_electron)
 	return config;
 }
 
-vector<int> third_shell_electonic_config(int no_of_electron,int atomic_number)
+vector<int> third_shell_orbital_config(int no_of_electron,int atomic_number,bool has_fourth_shell)
 {
-	if (no_of_electron > 8 && atomic_number !=24 && atomic_number != 29) no_of_electron -= 2;
-	if (no_of_electron > 8 && atomic_number == 24 || atomic_number == 29) no_of_electron -= 1;
+	if (no_of_electron > 8 && !has_fourth_shell) no_of_electron -= 2;
+	if (atomic_number == 29) no_of_electron -= 1;
 	vector<int> config;
 	if (no_of_electron <= 2)
 	{
@@ -109,5 +109,22 @@ vector<int> electronic_config(int atomic_number,vector<int> principal_config)
 {
 	vector<int> config;
 	vector<int> structure = shell_to_pseudo_orbital_structure(principal_config,atomic_number);
-	return structure;
+	bool has_fourth_shell = false;
+	if (size(principal_config) == 4)
+	{
+		has_fourth_shell = true;
+	}
+	for (int i = 0; i < size(structure); i++)
+	{
+		vector<int> dynamic_store;
+		if (i == 0) dynamic_store = first_shell_orbital_config(structure.at(i));
+		if (i == 1) dynamic_store = second_shell_orbital_config(structure.at(i));
+		if (i == 2) dynamic_store = third_shell_orbital_config(structure.at(i),atomic_number,has_fourth_shell);
+		if (i == 3) dynamic_store = fourth_shell_orbital_config(structure.at(i));
+		for (int j = 0; j < size(dynamic_store); j++)
+		{
+			config.push_back(dynamic_store.at(j));
+		}
+	}
+	return config;
 }
