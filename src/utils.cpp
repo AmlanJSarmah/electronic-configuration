@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include <fstream>
 #include "Header/utils.h"
 
@@ -32,12 +33,16 @@ int find_atomic_number(string element)
 	else return 0;
 }
 
-void print_config_from_vector(string name, string element, vector<int> config)
+vector<int> shell_to_pseudo_orbital_structure(vector<int> config,int atomic_number)
 {
-	cout << name << " quantam no config of " << element << " is ";
-	for (int i = 0; i < config.size(); i++)
+	vector<int> structure;
+	for (int i = 0; i < size(config); i++)
 	{
-		cout << config.at(i) << " ";
+
 	}
-	cout << endl;
+	return structure;
+}
+
+void print_config_from_vector(string element, vector<int> config)
+{
 }
