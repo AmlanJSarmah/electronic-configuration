@@ -52,14 +52,10 @@ vector<int> shell_to_pseudo_orbital_structure(vector<int> config,int atomic_numb
 
 void print_config_from_vector(string element, vector<int> config)
 {
-	int result = _setmode(_fileno(stdout), _O_U16TEXT);
-	int unicode_superscript_zero = 2070;
-	if(result != -1)
+	vector<string> orbital_order{ "1s","2s","2p","3s","3p","3d","4s","4p" };
+	cout << "Electronic configuration of " << element << " is " << endl;
+	for (int i = 0; i < size(config); i++)
 	{
-		wcout << L"\x2070 hey yo" << endl;
-	}
-	else
-	{
-
+		cout << orbital_order.at(i) << "^" << config.at(i) << " ";
 	}
 }
