@@ -2,8 +2,6 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <fcntl.h>
-#include <io.h>
 #include "Header/utils.h"
 
 using namespace std;
