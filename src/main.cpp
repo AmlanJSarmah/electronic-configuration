@@ -23,6 +23,6 @@ int main()
 	cout << "Atomic number of " << element << " is " << atomic_number << endl;
 	vector<int> principal_quantum_number = principal_quantum_number_config(atomic_number);
 	vector<int> structure = electronic_config(atomic_number,principal_quantum_number);
-	print_config_from_vector(element, structure);
+	print_config_from_vector(element, structure, atomic_number);
 	return 0;
 }
