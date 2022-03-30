@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <fcntl.h>
+#include <io.h>
 #include "Header/utils.h"
 
 using namespace std;
@@ -50,4 +52,14 @@ vector<int> shell_to_pseudo_orbital_structure(vector<int> config,int atomic_numb
 
 void print_config_from_vector(string element, vector<int> config)
 {
+	int result = _setmode(_fileno(stdout), _O_U16TEXT);
+	int unicode_superscript_zero = 2070;
+	if(result != -1)
+	{
+		wcout << L"\x2070 hey yo" << endl;
+	}
+	else
+	{
+
+	}
 }
