@@ -6,6 +6,10 @@ A command line C++ utility to quickly find the atomic number and electronic conf
 
 The entire program has been coded in C++ without any external dependencies.
 
+## Screenshots
+
+![Screenshot (10)](https://user-images.githubusercontent.com/99042379/161054346-71a98983-e849-442c-8b0f-7c4c5b044145.png)
+
 ## Development stage
 
 The command line application is now compleatedly usable for first 36 elements of periodic table 🎉✨
