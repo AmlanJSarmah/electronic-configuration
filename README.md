@@ -19,8 +19,6 @@ The command line application is now compleatedly usable for first 36 elements of
 2.For mingw g++ compiler  
 	- Download the code and copy the src folder to desired location.  
 	- open terminal inside src folder and run    
-		
-	
 		> g++ std=c++17 electronic_config.cpp Header/electronic_config.h utils.cpp Header/utils.h  
 
 
