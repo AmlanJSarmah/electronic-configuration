@@ -13,18 +13,18 @@ The command line application is now compleatedly usable for first 36 elements of
 ## Installation 
 
 1.For visual C++  
-	- open the solution file and build the code in **64 bit** a x64 folder should appear.  
-	- A debug sub folder would be present where the executable can be found one can copy the path and put it in the path variable for quick command line access.  
+	1.open the solution file and build the code in **64 bit** a x64 folder should appear.  
+	2.A debug sub folder would be present where the executable can be found one can copy the path and put it in the path variable for quick command line access.  
 
 2.For mingw g++ compiler  
-	- Download the code and copy the src folder to desired location.  
-	- open terminal inside src folder and run    
+	1.Download the code and copy the src folder to desired location.  
+	2.open terminal inside src folder and run    
 		
 	
 	g++ std=c++17 electronic_config.cpp Header/electronic_config.h utils.cpp Header/utils.h  
 
 
-**PS:You might have to change the path which is passed as argument in *fstream data* function to *./data.txt* in g++ compilers.**  
+**PS:You might have to change the path which is passed as argument in *fstream data* function to *./data.txt* for g++ compilers. in *utils.cpp* ** 
 
 ## TODOs
 
