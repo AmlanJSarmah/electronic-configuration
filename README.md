@@ -13,13 +13,11 @@ The command line application is now compleatedly usable for first 36 elements of
 ## Installation 
 
 1.For visual C++  
-
 	- open the solution file and build the code in **64 bit** a x64 folder should appear.  
 	- A debug sub folder would be present where the executable can be found one can copy the path and put it in the path variable for quick command line access.  
 
 
 2.For mingw g++ compiler  
-
 	- Download the code and copy the src folder to desired location.  
 	- open terminal inside src folder and run    
 		
