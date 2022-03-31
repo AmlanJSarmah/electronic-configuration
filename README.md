@@ -22,7 +22,7 @@ The command line application is now compleatedly usable for first 36 elements of
 		> g++ std=c++17 electronic_config.cpp Header/electronic_config.h utils.cpp Header/utils.h  
 
 
-	**PS:You might have to change the path which is passed as argument in *fstream data* function to *./data.txt* in g++ compilers.**  
+**PS:You might have to change the path which is passed as argument in *fstream data* function to *./data.txt* in g++ compilers.**  
 
 ## TODOs
 
