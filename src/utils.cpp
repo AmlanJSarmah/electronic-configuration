@@ -10,7 +10,7 @@ int find_atomic_number(string element)
 {
 	int result{ 1 };
 	bool is_found{ false };
-	fstream data("src/data.txt");
+	fstream data("./src/data.txt");
 	if (!data.is_open())
 	{
 		cout << "ERROR \n";

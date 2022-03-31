@@ -8,6 +8,7 @@ using namespace std;
 
 vector<int> principal_quantum_number_config(int atomic_number)
 {
+	//we aim to get a config of this sort Na = 2 8 1
 	vector<int> config;
 	const int no_of_shells = 7;
 	for (int i = 1; i <= no_of_shells ; i++)
