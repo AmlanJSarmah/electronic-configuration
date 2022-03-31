@@ -49,20 +49,20 @@ vector<int> second_shell_orbital_config(int no_of_electron)
 	return config;
 }
 
-vector<int> third_shell_orbital_config(int no_of_electron,int atomic_number)
+vector<int> third_shell_orbital_config(int no_of_electron)
 {
 	vector<int> config;
 	if (no_of_electron <= 2)
 	{
 		return vector<int> {no_of_electron};
 	}
-	if (no_of_electron <= 8)
+	else if (no_of_electron <= 8)
 	{
 		int no_of_orbital = 2;
 		for (int i = 0; i < no_of_orbital; i++)
 		{
-			if (i == 0) config.push_back(2);
-			else config.push_back(no_of_electron - 2);
+			if (i == 0) config.push_back(2); //pushing value of 3s
+			else config.push_back(no_of_electron - 2); //pushing value of 3p by dynamically calculating
 		}
 	}
 	else
@@ -70,9 +70,9 @@ vector<int> third_shell_orbital_config(int no_of_electron,int atomic_number)
 		int no_of_orbital = 3;
 		for (int i = 0; i < no_of_orbital; i++)
 		{
-			if (i == 0) config.push_back(2);
-			else if (i == 1) config.push_back(6);
-			else config.push_back(no_of_electron - 8);
+			if (i == 0) config.push_back(2);//pushing value of 3s
+			else if (i == 1) config.push_back(6);//pushing value of 3p
+			else config.push_back(no_of_electron - 8);//pushing value of 3d by dynamically calculating
 		}
 	}
 	return config;
@@ -103,7 +103,7 @@ vector<int> electronic_config(int atomic_number,vector<int> principal_config)
 		vector<int> dynamic_store;
 		if (i == 0) dynamic_store = first_shell_orbital_config(structure.at(i));
 		if (i == 1) dynamic_store = second_shell_orbital_config(structure.at(i));
-		if (i == 2) dynamic_store = third_shell_orbital_config(structure.at(i),atomic_number);
+		if (i == 2) dynamic_store = third_shell_orbital_config(structure.at(i));
 		if (i == 3) dynamic_store = fourth_shell_orbital_config(structure.at(i));
 		for (int j = 0; j < size(dynamic_store); j++)
 		{
